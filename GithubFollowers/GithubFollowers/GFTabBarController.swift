@@ -1,16 +1,14 @@
 //
-//  SearchVC.swift
+//  GFTabBarController.swift
 //  GithubFollowers
 //
-//  Created by Rami Mustafa on 30.06.24.
+//  Created by Rami Mustafa on 01.07.24.
 //
 
 import UIKit
-import SnapKit
 
-class SearchVC: UIViewController {
-  
-    
+class GFTabBarController: UIViewController {
+
     // MARK: - Variables
     
     // MARK: - UI Components
@@ -22,12 +20,12 @@ class SearchVC: UIViewController {
         setupView()
     }
     // MARK: - UI Setup
-    private func setupView(){
-        view.backgroundColor = .systemRed
-
-    }
+    private func setupView(){}
     
     // MARK: - Selectors
 
+    
+
+   
+
 }
- 
