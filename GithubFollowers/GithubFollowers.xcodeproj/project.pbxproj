@@ -17,6 +17,8 @@
 		3868D1292C2DFD71005DA9CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3868D1272C2DFD71005DA9CD /* LaunchScreen.storyboard */; };
 		38D7203F2C31FA6100A66DB3 /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D7203E2C31FA6100A66DB3 /* SearchVC.swift */; };
 		38D720422C31FA9800A66DB3 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 38D720412C31FA9800A66DB3 /* SnapKit */; };
+		38E0312D2C3338A40084E84A /* GFTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E0312C2C3338A40084E84A /* GFTabBarController.swift */; };
+		38E0312F2C333B880084E84A /* FavoritesListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E0312E2C333B880084E84A /* FavoritesListVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +33,8 @@
 		3868D1282C2DFD71005DA9CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3868D12A2C2DFD71005DA9CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		38D7203E2C31FA6100A66DB3 /* SearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
+		38E0312C2C3338A40084E84A /* GFTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFTabBarController.swift; sourceTree = "<group>"; };
+		38E0312E2C333B880084E84A /* FavoritesListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesListVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,7 +74,9 @@
 				38D7203E2C31FA6100A66DB3 /* SearchVC.swift */,
 				3847868C2C2F54530026DFDA /* GFError.swift */,
 				3847868E2C30A28B0026DFDA /* Follower.swift */,
+				38E0312C2C3338A40084E84A /* GFTabBarController.swift */,
 				384786902C30A2A30026DFDA /* User.swift */,
+				38E0312E2C333B880084E84A /* FavoritesListVC.swift */,
 			);
 			path = GithubFollowers;
 			sourceTree = "<group>";
@@ -170,6 +176,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38E0312F2C333B880084E84A /* FavoritesListVC.swift in Sources */,
+				38E0312D2C3338A40084E84A /* GFTabBarController.swift in Sources */,
 				3868D1212C2DFD70005DA9CD /* ViewController.swift in Sources */,
 				3847868F2C30A28B0026DFDA /* Follower.swift in Sources */,
 				384786912C30A2A30026DFDA /* User.swift in Sources */,
