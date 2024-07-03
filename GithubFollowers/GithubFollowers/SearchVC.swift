@@ -23,9 +23,10 @@ class SearchVC: UIViewController {
     // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setupView()
+        createDismissKeyboardTapGesture()
     }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         usernameTextField.text = ""
@@ -35,9 +36,10 @@ class SearchVC: UIViewController {
     
     
     
-    
     // MARK: - UI Setup
     private func setupView(){
+        view.backgroundColor = .white
+
         view.addSubview(logoImageView)
         logoImageView.image = UIImage(named: "gh-logo")
         let topConstraintConstant: CGFloat = DeviceTypes.isiPhoneSE || DeviceTypes.isiPhone8Zoomed ? 20 : 80
@@ -48,6 +50,7 @@ class SearchVC: UIViewController {
         }
         
         view.addSubview(usernameTextField)
+        usernameTextField.delegate = self
         usernameTextField.snp.makeConstraints { make in
             make.top.equalTo(logoImageView.snp.bottom).offset(48)
             make.leading.equalToSuperview().offset(50)
@@ -66,9 +69,23 @@ class SearchVC: UIViewController {
         
     }
     
+    func createDismissKeyboardTapGesture(){
+        let tap = UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing))
+        view.addGestureRecognizer(tap)
+    }
+    
+    
+    
     // MARK: - Selectors
     @objc func pushFollowerListVC(){
         
     }
 }
 
+
+extension SearchVC: UITextFieldDelegate{
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+//        pushFollowerListVC()
+        return true
+    }
+}
