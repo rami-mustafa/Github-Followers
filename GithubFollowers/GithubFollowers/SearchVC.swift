@@ -13,6 +13,8 @@ class SearchVC: UIViewController {
     // MARK: - UI Components
     let logoImageView = UIImageView()
     let usernameTextField = GFTextField()
+    let callToActionButton = GFButton(color: .systemGreen, title: "Get Followers", systemImageName: "person.3")
+    
     
     
     // MARK: - Variables
@@ -46,16 +48,27 @@ class SearchVC: UIViewController {
         }
         
         view.addSubview(usernameTextField)
-         usernameTextField.snp.makeConstraints { make in
+        usernameTextField.snp.makeConstraints { make in
             make.top.equalTo(logoImageView.snp.bottom).offset(48)
             make.leading.equalToSuperview().offset(50)
             make.trailing.equalToSuperview().offset(-50)
             make.height.equalTo(50)
         }
         
+        view.addSubview(callToActionButton)
+        callToActionButton.addTarget(self, action: #selector(pushFollowerListVC), for: .touchUpInside)
+        callToActionButton.snp.makeConstraints { make in
+            make.bottom.equalToSuperview().inset(120)
+            make.leading.equalToSuperview().offset(50)
+            make.trailing.equalToSuperview().inset(50)
+            make.height.equalTo(50)
+        }
+        
     }
     
     // MARK: - Selectors
-    
+    @objc func pushFollowerListVC(){
+        
+    }
 }
 
