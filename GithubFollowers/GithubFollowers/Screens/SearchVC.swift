@@ -10,12 +10,11 @@ import SnapKit
 
 class SearchVC: UIViewController {
     
+    
     // MARK: - UI Components
     let logoImageView = UIImageView()
     let usernameTextField = GFTextField()
     let callToActionButton = GFButton(color: .systemGreen, title: "Get Followers", systemImageName: "person.3")
-    
-    
     
     // MARK: - Variables
     
@@ -32,9 +31,7 @@ class SearchVC: UIViewController {
         usernameTextField.text = ""
         navigationController?.setNavigationBarHidden(true, animated: true)
     }
-    
-    
-    
+
     
     // MARK: - UI Setup
     private func setupView(){
@@ -66,15 +63,12 @@ class SearchVC: UIViewController {
             make.trailing.equalToSuperview().inset(50)
             make.height.equalTo(50)
         }
-        
     }
     
     func createDismissKeyboardTapGesture(){
         let tap = UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing))
         view.addGestureRecognizer(tap)
     }
-    
-    
     
     // MARK: - Selectors
     @objc func pushFollowerListVC(){
@@ -85,7 +79,7 @@ class SearchVC: UIViewController {
 
 extension SearchVC: UITextFieldDelegate{
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-//        pushFollowerListVC()
+        print( "Deneme oldu " )
         return true
     }
 }

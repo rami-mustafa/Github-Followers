@@ -78,12 +78,11 @@
 				3868D1332C2DFF96005DA9CD /* Screens */,
 				3868D1322C2DFF81005DA9CD /* Support */,
 				3868D12A2C2DFD71005DA9CD /* Info.plist */,
-				38D7203E2C31FA6100A66DB3 /* SearchVC.swift */,
 				3847868C2C2F54530026DFDA /* GFError.swift */,
+				38BAC4EF2C343DF8009481FE /* Constants.swift */,
 				3847868E2C30A28B0026DFDA /* Follower.swift */,
 				38E0312C2C3338A40084E84A /* GFTabBarController.swift */,
 				384786902C30A2A30026DFDA /* User.swift */,
-				38E0312E2C333B880084E84A /* FavoritesListVC.swift */,
 			);
 			path = GithubFollowers;
 			sourceTree = "<group>";
@@ -95,7 +94,6 @@
 				3868D11E2C2DFD70005DA9CD /* SceneDelegate.swift */,
 				3868D1252C2DFD71005DA9CD /* Assets.xcassets */,
 				3868D1272C2DFD71005DA9CD /* LaunchScreen.storyboard */,
-				38BAC4EF2C343DF8009481FE /* Constants.swift */,
 			);
 			path = Support;
 			sourceTree = "<group>";
@@ -104,6 +102,8 @@
 			isa = PBXGroup;
 			children = (
 				3868D1202C2DFD70005DA9CD /* ViewController.swift */,
+				38E0312E2C333B880084E84A /* FavoritesListVC.swift */,
+				38D7203E2C31FA6100A66DB3 /* SearchVC.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
