@@ -90,6 +90,8 @@
 		3868D11B2C2DFD70005DA9CD /* GithubFollowers */ = {
 			isa = PBXGroup;
 			children = (
+				38B8D3D22C3F2C8400451893 /* Extensions */,
+				38B8D3D12C3F2C3E00451893 /* Model */,
 				380B2DED2C3B365E000181A0 /* Utilities */,
 				38BAC4EE2C343C1D009481FE /* Custom Views */,
 				3868D1332C2DFF96005DA9CD /* Screens */,
@@ -97,12 +99,7 @@
 				3868D12A2C2DFD71005DA9CD /* Info.plist */,
 				3847868C2C2F54530026DFDA /* GFError.swift */,
 				38BAC4EF2C343DF8009481FE /* Constants.swift */,
-				3847868E2C30A28B0026DFDA /* Follower.swift */,
 				38E0312C2C3338A40084E84A /* GFTabBarController.swift */,
-				384786902C30A2A30026DFDA /* User.swift */,
-				38D1B97C2C3C88210036C894 /* Date+Ext.swift */,
-				38D1B97E2C3C883B0036C894 /* UITableView.swift */,
-				38D1B9802C3C88590036C894 /* UIView.swift */,
 			);
 			path = GithubFollowers;
 			sourceTree = "<group>";
@@ -126,6 +123,25 @@
 				38D7203E2C31FA6100A66DB3 /* SearchVC.swift */,
 			);
 			path = Screens;
+			sourceTree = "<group>";
+		};
+		38B8D3D12C3F2C3E00451893 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3847868E2C30A28B0026DFDA /* Follower.swift */,
+				384786902C30A2A30026DFDA /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		38B8D3D22C3F2C8400451893 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				38D1B97C2C3C88210036C894 /* Date+Ext.swift */,
+				38D1B97E2C3C883B0036C894 /* UITableView.swift */,
+				38D1B9802C3C88590036C894 /* UIView.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		38BAC4EE2C343C1D009481FE /* Custom Views */ = {
