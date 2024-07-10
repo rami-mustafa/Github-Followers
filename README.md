@@ -1,5 +1,8 @@
-This project stands for an app which you can see the list followers of a GitHub user via searching their username on Github.
+A mobile app to search for and view any GitHub user's followers. You can see follower details, including repo and gist counts, follower and following counts, and join date. Easily open their GitHub profile in Safari with one click.
 
-You can see open the profile detail of your follower not only to learn about their repo-gist count, following-follower count and when they joined the GitHub. But also, you can open their GitHub Page via one click on Safari.
-You can add your favorite followers to your favorites list to reach their profile easily. When you decide someone is not your favorite you can remove them too.
-You can search someone from your followers to find the one you are looking for.
+Features:
+
+Search and View Followers: Search GitHub users and see their followers.
+Profile Details: View detailed follower profiles and open their GitHub page.
+Favorites: Add or remove followers from your favorites list for quick access.
+Search within Followers: Find specific followers easily with search functionality.
