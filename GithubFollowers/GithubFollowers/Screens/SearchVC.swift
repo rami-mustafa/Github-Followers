@@ -72,6 +72,12 @@ class SearchVC: UIViewController {
     
     // MARK: - Selectors
     @objc func pushFollowerListVC(){
+        let followerListVC      = FollowerListVC()
+        followerListVC.username = usernameTextField.text
+        followerListVC.title    = usernameTextField.text
+        
+        navigationController?.pushViewController(followerListVC, animated: true)
+
         
     }
 }
@@ -79,7 +85,8 @@ class SearchVC: UIViewController {
 
 extension SearchVC: UITextFieldDelegate{
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        print( "Deneme oldu " )
+        print( "Arama Yapıldı " )
+        pushFollowerListVC()
         return true
     }
 }

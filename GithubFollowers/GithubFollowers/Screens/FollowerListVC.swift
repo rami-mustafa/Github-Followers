@@ -10,6 +10,7 @@ import UIKit
 class FollowerListVC: UIViewController {
 
     // MARK: - Variables
+    var username: String!
     
     // MARK: - UI Components
     
@@ -17,7 +18,15 @@ class FollowerListVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setupView()
+        view.backgroundColor = .systemBackground
+        navigationController?.isNavigationBarHidden = false
+        navigationController?.navigationBar.prefersLargeTitles = true
+//        setupView()
+        
+        
+        
+        
+        
     }
     // MARK: - UI Setup
     private func setupView(){}
