@@ -17,7 +17,7 @@ class SearchVC: UIViewController {
     let callToActionButton = GFButton(color: .systemGreen, title: "Get Followers", systemImageName: "person.3")
     
     // MARK: - Variables
-    
+    var isUsernameEntered: Bool { return !usernameTextField.text!.isEmpty }
     
     // MARK: - LifeCycle
     override func viewDidLoad() {
@@ -72,6 +72,12 @@ class SearchVC: UIViewController {
     
     // MARK: - Selectors
     @objc func pushFollowerListVC(){
+
+        guard isUsernameEntered else {
+            print("No Username")
+            return
+        }
+        
         let followerListVC      = FollowerListVC()
         followerListVC.username = usernameTextField.text
         followerListVC.title    = usernameTextField.text
