@@ -31,12 +31,12 @@ class SearchVC: UIViewController {
         usernameTextField.text = ""
         navigationController?.setNavigationBarHidden(true, animated: true)
     }
-
+    
     
     // MARK: - UI Setup
     private func setupView(){
         view.backgroundColor = .white
-
+        
         view.addSubview(logoImageView)
         logoImageView.image = UIImage(named: "gh-logo")
         let topConstraintConstant: CGFloat = DeviceTypes.isiPhoneSE || DeviceTypes.isiPhone8Zoomed ? 20 : 80
@@ -72,9 +72,11 @@ class SearchVC: UIViewController {
     
     // MARK: - Selectors
     @objc func pushFollowerListVC(){
-
+        
         guard isUsernameEntered else {
-            print("No Username")
+            DispatchQueue.main.async {
+                self.presentGFAlert(title: "Empty Username", message: "Please enter a username. We need to know who to look for 😘", buttonTitle: "OK")
+            }
             return
         }
         
@@ -83,7 +85,7 @@ class SearchVC: UIViewController {
         followerListVC.title    = usernameTextField.text
         
         navigationController?.pushViewController(followerListVC, animated: true)
-
+        
         
     }
 }
