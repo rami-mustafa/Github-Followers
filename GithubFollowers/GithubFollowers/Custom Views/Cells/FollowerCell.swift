@@ -11,9 +11,9 @@ class FollowerCell: UICollectionViewCell {
     
     static let reuseID: String = "FollowerCell"
     
-    let avatarImageView = UIImageView()
-     let usernameLabel = UILabel()
-    
+    let avatarImageView = GFAvatarImageView(frame: .zero)
+    let usernameLabel   = GFTitleLabel(textAlignment: .center, fontSize: 16)
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         configure()
@@ -26,6 +26,7 @@ class FollowerCell: UICollectionViewCell {
     
     func set(follower: Follower){
         usernameLabel.text = follower.login
+        avatarImageView.downloadImage(fromURL: follower.avatarUrl)
     }
     
     
@@ -34,8 +35,13 @@ class FollowerCell: UICollectionViewCell {
         addSubviews(avatarImageView)
         addSubviews(usernameLabel)
         
+
         
-        usernameLabel.textColor = .red
+        avatarImageView.translatesAutoresizingMaskIntoConstraints = false
+        usernameLabel.translatesAutoresizingMaskIntoConstraints = false
+
+        
+
         
         let padding: CGFloat = 8
         
@@ -43,7 +49,7 @@ class FollowerCell: UICollectionViewCell {
             avatarImageView.topAnchor.constraint(equalTo: topAnchor, constant: padding ),
             avatarImageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: padding ),
             avatarImageView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -padding ),
-            avatarImageView.heightAnchor.constraint(equalToConstant: 20 ),
+            avatarImageView.heightAnchor.constraint(equalTo: avatarImageView.widthAnchor),
 
             usernameLabel.topAnchor.constraint(equalTo: avatarImageView.bottomAnchor , constant: 12 ),
             usernameLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: padding ),

@@ -11,8 +11,8 @@ import UIKit
 class GFAvatarImageView: UIImageView {
     
     let cache = NetworkManager.shared.cache
-    let placeholderImage = UIImage(named: "aavatar-placeholder")
-    
+    let placeholderImage = UIImage(named: "avatar-placeholder")!
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupUI()
@@ -28,9 +28,12 @@ class GFAvatarImageView: UIImageView {
         image = placeholderImage
     }
     
+    
     func downloadImage(fromURL url: String){
-        Task{
-            image = await NetworkManager.shared.downloadImage(from: url) ?? placeholderImage
-        }
-    }
+          Task{
+              image = await NetworkManager.shared.downloadImage(from: url) ?? placeholderImage
+          }
+      }
+    
+     
 }
