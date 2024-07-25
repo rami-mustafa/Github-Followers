@@ -29,7 +29,7 @@ class GFUserInfoHeaderVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupUI()
+        layoutUI()
         configureUIElements()
     }
     
@@ -44,7 +44,7 @@ class GFUserInfoHeaderVC: UIViewController {
         locationImageView.tintColor = .secondaryLabel
     }
     
-    func setupUI(){
+    func layoutUI(){
         view.addSubviews(avatarImageView, usernameLabel, nameLabel, locationImageView, locationLabel, bioLabel)
         let padding: CGFloat = 20
         let textImagePadding: CGFloat = 12
