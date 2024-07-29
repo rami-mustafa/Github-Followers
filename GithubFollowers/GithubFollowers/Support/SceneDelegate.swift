@@ -29,6 +29,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         return UINavigationController(rootViewController: searchVC)
     }
     
+    
+    
+    
     func createFavoritesNC() -> UINavigationController {
         let FavoritesListVC = FavoritesListVC()
         FavoritesListVC.title = "Favorite"
